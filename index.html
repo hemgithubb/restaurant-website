@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>my webite</title>
+   <!--<link rel="stylesheet" href="css/phone.css">-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <style>
+      /*css reset*/
+      * {
+         margin: 0;
+         padding: 0;
+      }
+
+      .navbar {
+         display: flex;
+         background-color: rgb(5, 5, 5);
+         position: sticky;
+         top: 0px;
+         z-index: 100;
+         opacity: 1;
+         width: 100%;
+         height: auto;
+         justify-content: space-between;
+      }
+
+      .logo {
+         margin: auto 0px;
+      }
+
+      .logo img {
+         height: 3.5vw;
+         width: 3.5vw;
+         border-radius: 50%;
+      }
+
+      .list {
+         display: flex;
+         height: auto;
+         justify-content: end;
+         margin: auto 0px;
+      }
+
+      .list li {
+         /*  background-color: aqua;*/
+         list-style: none;
+         align-items: center;
+         margin-left: 30px;
+         text-align: center;
+      }
+
+
+      .list li a {
+         text-decoration: none;
+         display: block;
+         font-family: 'Times New Roman', Times, serif;
+         font-size: 1.7vw;
+         color: aliceblue;
+         padding: 0px 3px;
+      }
+
+      .list li a:hover {
+         color: rgb(12, 12, 12);
+         background-color: rgb(218, 229, 236);
+         border-radius: 5px;
+      }
+
+      @media only screen and (max-width:450px) {
+         .list {
+            flex-direction: column;
+            background-color: rgb(36, 23, 49);
+            width: 100%;
+            display: none;
+         }
+
+         .list li {
+            padding: 15px 0px;
+            margin: auto auto;
+         }
+
+         .navbar {
+            flex-direction: column;
+         }
+
+         .list li a {
+            font-size: 1.9vw;
+         }
+
+         .chb {
+            font-size: 3vw;
+         }
+      }
+
+      @media only screen and (min-width:450px) and (max-width:4000px) {
+         .menu {
+            display: none;
+         }
+      }
+
+      .home {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 0px 0px;
+         text-align: center;
+         /*padding: 10px 10px;*/
+         color: rgb(250, 248, 248);
+         text-shadow: 1.5px 1.5px black;
+         font-size: 20px;
+         opacity: 10;
+      }
+
+      .home p {
+         font-size: 2vw;
+      }
+
+      .home h2 {
+         margin: 0px 0px;
+         font-size: 3vw;
+         text-shadow: 1px 1px white;
+         color: rgb(51, 53, 182);
+      }
+
+      .all {
+         height: 100%;
+         width: 100%;
+         background: rgba(0, 0, 0, 0.6)url('images/food background.jpg');
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         background-blend-mode: darken;
+
+      }
+
+      .order {
+         background-color: green;
+         margin: 0.5vw;
+         padding: 2px 12px;
+         border-radius: 15px;
+         color: white;
+         font-size: 1.5vw;
+         transition-property: all 1.5s;
+         cursor: pointer;
+      }
+
+      .order:hover {
+         border-radius: 30px;
+         transform: scale(1.2);
+      }
+
+      .survices {
+         width: auto;
+         height: auto;
+         top: 0px;
+         margin: 0px 20px;
+      }
+
+      .boxes {
+         display: flex;
+         margin: 0px 0px;
+         justify-content: center;
+         padding: 10px 0px;
+
+      }
+
+      .heading {
+         display: flex;
+         justify-content: center;
+         font-size: 4vw;
+         color: rgb(241, 246, 248);
+         text-shadow: 3px 2px black;
+      }
+
+      .box {
+         margin: 0px 10px;
+         text-align: center;
+         border-radius: 25px;
+      }
+
+      .box img {
+         height: auto;
+         width: 100%;
+         border-radius: 15px;
+         border: 1px solid black;
+      }
+
+      .box img:hover {
+         border: 1px solid rgb(53, 143, 216);
+      }
+
+      .box h1 {
+         /*position: relative;*/
+
+         color: white;
+         font-size: 2.4vw;
+         text-shadow: 2px 2px black;
+      }
+
+      .text p {
+         color: rgb(248, 241, 241);
+         text-shadow: 1px 1px rgb(10, 10, 10);
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .background {
+         height: auto;
+         width: 100%;
+      }
+
+      .background {
+         width: 100%;
+         height: auto;
+         background-color: aqua;
+         background: rgba(0, 0, 0, 0.6)url('images/bsc.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-blend-mode: darken;
+      }
+
+      .clint {
+         text-align: center;
+         padding-top: 20px;
+      }
+
+      .clint h2 {
+         font-size: 2.4vw;
+         color: white;
+         text-shadow: 2px 2px rgb(70, 42, 42);
+      }
+
+      .ourclint {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         margin: 0px 0px;
+
+      }
+
+
+      .ourclint img {
+         width: 15vw;
+         height: 15vw;
+         margin: 4px;
+
+      }
+
+      .many {
+         color: white;
+         font-size: 3vw;
+         text-shadow: 2px 2px rgb(231, 110, 110);
+         align-items: center;
+         margin: 0;
+      }
+
+      .foods {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .food {
+         text-align: center;
+         background: rgba(0, 0, 0, 0.4)url('images/restraunt.webp');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-blend-mode: darken;
+         position: relative;
+         width: 100%;
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         backdrop-filter: blur(5px);
+         padding: 20px 0px;
+      }
+
+      .foods {
+         margin: 15px 0px;
+      }
+
+      .food1 p {
+         color: rgb(12, 12, 12);
+         font-size: 2vw;
+         text-shadow: 2px 2px rgb(253, 252, 252);
+      }
+
+      .food h1 {
+         color: rgb(201, 219, 235);
+         text-shadow: 3px 3px rgb(10, 10, 10);
+         font-size: 5vw;
+      }
+
+      .food img {
+         width: 12vw;
+         height: 12vw;
+         margin: 2px 2px;
+         transition: all 0.5s;
+      }
+
+      .food1 {
+         transition: all 0.5s;
+         margin: 17px 10px;
+         background-color: pink;
+      }
+
+      .pack {
+         display: flex;
+      }
+
+      .food1:hover {
+         border-radius: 2vw;
+         transform: scale(2);
+         transform: translateY(-23px);
+      }
+
+      .food1 img:hover {
+         border-radius: 2vw;
+      }
+
+      .but {
+         text-decoration: none;
+         color: antiquewhite;
+         font-size: 1vw;
+         margin: 0px 0px;
+         background-color: red;
+         border-radius: 1vw;
+         width: auto;
+         height: auto;
+         padding: 0px 5px;
+      }
+
+      .but:hover {
+         color: blue;
+      }
+
+      .contact {
+         background-color: lightgray;
+         text-align: center;
+         width: 100%;
+         height: auto;
+      }
+
+      .con {
+         display: flex;
+         justify-content: center;
+         padding: 0px 0px;
+      }
+
+      .hem {
+         margin: 20px 20px;
+         align-items: center;
+         text-align: center;
+         width: auto;
+      }
+
+      .call img {
+         width: 15vw;
+         height: auto;
+      }
+
+      #l1 {
+         display: flex;
+         padding: 7px 10px;
+      }
+
+      #l1 img {
+         width: 2vw;
+         height: auto;
+         margin: 0px 0px;
+      }
+
+      .last {
+         text-align: center;
+         color: aliceblue;
+         background-color: black;
+      }
+
+      @media only screen and (max-width:800px) {
+         .con {
+            flex-direction: column;
+            text-align: center;
+         }
+
+         #li img {
+            width: 2vw;
+            height: 3vw
+         }
+
+         .link a {
+            font-size: 10px;
+         }
+
+         .mail p {
+            font-size: 11px;
+         }
+      }
+
+      @media only screen and (min-width:370px) and (max-width:800px) {
+         .hem {
+            align-items: center;
+            text-align: center;
+            margin: 0px 8vw;
+         }
+
+         .con {
+            flex-direction: column;
+            text-align: center;
+
+
+         }
+      }
+
+      @media only screen and (max-width:400px) {
+         .hem {
+            align-items: center;
+            text-align: center;
+            margin: 0px 0px;
+         }
+      }
+
+      .chb {
+         margin: auto 0px;
+      }
+
+      .chb p {
+         color: white;
+         background-color: rgb(6, 165, 238);
+         border-radius: 8px;
+         padding: 2px 5px;
+         font-size: 1vw;
+         align-items: center;
+         text-align: center;
+      }
+
+      .nu {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .h {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .menu {
+         color: white;
+         cursor: pointer;
+      }
+
+      .menu i {
+         font-size: 13px;
+      }
+
+      #menu {
+         display: none;
+      }
+      .paragraph{
+         margin-left: 7px;
+         margin-right: 7px;
+      }
+      .pas{
+         font-size: medium;
+      }
+   </style>
+</head>
+
+<body>
+   <nav class="navbar">
+      <div class="h">
+         <div class="logo">
+            <img src="images/chef.jpg" alt="my logo">
+         </div>
+         <span class="menu" onclick="showBox()"><i class="material-icons">menu</i></span>
+      </div>
+      <ul class="list" id="menu">
+         <li class="item"><a href="">Home</a></li>
+         <li class="item"><a href="/images/menu-card-printing-service.jpeg">Our Menu</a></li>
+         <li class="item"><a href="#contact">Contact us</a></li>
+         <li class="item"><a href="#food">Dishes</a></li>
+         <li class="item"><a href="https://wa.me/+917987240879">Whatsapp us</a></li>
+      </ul>
+      <ul class="list" id="hemu">
+         <li class="item"><a href="">Home</a></li>
+         <li class="item"><a href="/images/menu-card-printing-service.jpeg">Our Menu</a></li>
+         <li class="item"><a href="#contact">Contact us</a></li>
+         <li class="item"><a href="#food">Dishes</a></li>
+         <li class="item"><a href="https://wa.me/+917987240879">Whatsapp us</a></li>
+      </ul>
+   </nav>
+   <div class="all">
+      <div class="home">
+         <h2 class="online">Welcome to Raipurian restraunt</h2>
+         <p class="paragraph"> <p class="pas">Hungry?you are in right place</p> meals in Raipurian restraunt is not just a food; it's an experience filled with delicious flavors, friendly ambiance, and
+            the promise of culinary delight. We're excited to explore your menu and savor the wonderful dishes you have
+            to offer. Whether it's a special occasion or a casual meal, we're here to enjoy the fantastic hospitality
+            you provide. Thank you for having us, and we look forward to a memorable dining experience!
+         </p>
+         <a href="form.html"><button class="order">order now >></button></a>
+      </div>
+      <section class="survices">
+         <h2 class="heading">survices</h2>
+         <div class="boxes">
+            <div id="box1" class="box">
+               <img src="images/burger.jpg" alt="burger">
+               <div class="text">
+                  <h1>food ordering</h1>
+               </div>
+            </div>
+            <div id="box2" class="box">
+               <img src="images/food delivery.png" alt="burger">
+               <div class="text">
+                  <h1>food delivery</h1>
+               </div>
+            </div>
+            <div id="box3" class="box">
+               <img src="images/waiter.jpg" alt="burger">
+               <div class="text">
+                  <h1>booking</h1>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+   <section class="background">
+      <section class="clint">
+         <h2 class="our">we are available in</h2>
+         <div class="ourclint">
+            <img src="images/instacard-removebg-preview.png" alt="clint 1">
+            <img src="images/zomato-removebg-preview.png" alt="clint 2">
+            <img src="images/swiggy-removebg-preview.png" alt="clint 3">
+            <img src="images/dominos-removebg-preview.png" alt="clint 4">
+            <img src="images/freshmenu-removebg-preview.png" alt="clint 5">
+            <img src="images/Grubhub-Logo-removebg-preview.png" alt="clint 6">
+         </div>
+      </section>
+   </section>
+   <div class="food" id="food">
+      <h1 class="dish">our dishes</h1>
+      <div class="foods">
+         <div class="food1">
+            <a href="form.html"><img src="images/pizza.jpg" alt=""></a>
+            <p>pizza 199rs</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/chinies food.jpg" alt=""></a>
+            <p>chinies</p>
+         </div>
+         <div class="food1">
+            <a href=""><img src="images/sweets.webp" alt=""></a>
+            <p>sweets</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/icecream.jpg" alt=""></a>
+            <p>icecream</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/momos.webp" alt=""></a>
+            <p>momos</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/samosa.webp" alt=""></a>
+            <p>samosa</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/veg.jpg" alt=""></a>
+            <p>veg food</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/nonveg.webp" alt=""></a>
+            <p>nonveg food</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/rinks.png" alt=""></a>
+            <p>drinks</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/pani puri.jpg" alt=""></a>
+            <p>pani puri</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/noodle.jpg" alt=""></a>
+            <p>noodle</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/roti.jpg" alt=""></a>
+            <p>roti</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/south indian.jpg" alt=""></a>
+            <p>south indian</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/biryani.webp" alt=""></a>
+            <p>biryani</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/cake.jpg" alt=""></a>
+            <p>cakes</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/cofee.jpg" alt=""></a>
+            <p>cofee</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/cofee.jpg" alt=""></a>
+            <p>cofee</p>
+         </div>
+         <div class="food1">
+            <a href="form.html"><img src="images/noodle.jpg" alt=""></a>
+            <p>noodle</p>
+         </div>
+      </div>
+      <a class="but" href="#">back to top</a>
+   </div>
+   <div id="contact" class="contact">
+      <h1>contact us</h1>
+      <div class="con">
+         <div class="call">
+            <img src="images/contact.png" alt="contact us">
+         </div>
+         <div class="hem">
+            <div class="phone" id="l1">
+               <img src="images/call-removebg-preview.png" alt="">
+               <h4>contact number:-</h4>
+               <a href="tel:+917987240879">7987240879</a>
+            </div>
+            <div id="l1">
+               <img src="images/whats-removebg-preview.png" alt="">
+               <h4>whatsapp:-</h4>
+               <a href="https://wa.me/+917987240879">
+                  <p>7987240879</p>
+               </a>
+            </div>
+            <div class="link" id="l1">
+               <img src="images/linkedin-removebg-preview.png" alt="">
+               <h4>linkedin:-</h4>
+               <a
+                  href="https://in.linkedin.com/in/hemprakash-sahu-466a1a257">https://in.linkedin.com/in/hemprakash-sahu-466a1a257</a>
+            </div>
+            <div class="insta" id="l1">
+               <img src="images/insta-removebg-preview.png" alt="">
+               <h4>instagram:-</h4>
+               <a href="https://www.instagram.com/invites/contact/?i=191f55bqn2dap&utm_content=lzkmbpj">hemprakash74</a>
+            </div>
+            <div class="mail" id="l1">
+               <img src="images/email-removebg-preview.png" alt="">
+               <h4>email</h4>
+               <a href="mailto:hemprakashsahu18@gmail.com">hemprakashsahu18@gmail.com</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="last">
+      copyright &copy;www.myOnlineFood
+   </div>
+</body>
+<script src="web.js"></script>
+
+</html>
