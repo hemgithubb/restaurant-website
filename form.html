@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .form {
+            margin: auto auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .men {
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .loc {
+            background-color: rgb(64, 199, 240);
+            border-radius: 5px;
+            text-align: center;
+            padding: 2px 0px;
+        }
+
+        #menn {
+            width: 45vw;
+        }
+
+        .hem {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pos {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .but {
+            text-align: center;
+        }
+
+        button {
+            margin: 0px 10px;
+        }
+
+        .ton:hover {
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .can:hover {
+            background-color: red;
+            border-radius: 5px;
+        }
+
+        h3 {
+            align-items: center;
+            text-align: center;
+        }
+
+        .hy {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="hy">Add your details here</h2>
+    <div class="form">
+        <form>
+            <h3>personal details</h3>
+            <div class="men">
+                <label for="name">Name</label>
+                <input type="text" name="myname" id="golu">
+            </div>
+            <div class="men">
+                <label for="tel">Phone number</label>
+                <input type="tel" name="myrole">
+            </div>
+            <div class="men">
+                <label for="email">Email</label>
+                <input type="email" name="myemail">
+            </div>
+
+            <div class="men">
+                <label for="date">Date</label>
+                <input type="date" name="mydate">
+            </div>
+            <h3>order</h3>
+            <div class="men">
+                <label for="date">quantity</label>
+                <input type="number" name="mydate">
+            </div>
+            <div class="men">
+                <label for="date">select meal</label>
+                <select name="" id="">
+                    <option value="">Pizza</option>
+                    <option value="">Kulhad pizza</option>
+                    <option value="">Momos</option>
+                    <option value="">Gulab jamun</option>
+                    <option value="">Noodle</option>
+                    <option value="">Pastry</option>
+                    <option value="">icecream</option>
+                    <option value="">samosa</option>
+                    <option value="">thali</option>
+                    <option value="">water bottle</option>
+                    <option value="">pani puri</option>
+                    <option value="">Plane dosa</option>
+                    <option value="">masala dosa</option>
+                    <option value="">paneer dosa</option>
+                    <option value="">chicken biryani</option>
+                    <option value="">Egg biryani</option>
+                    <option value="">Weg biryani</option>
+                    <option value="">Tanduri chicken</option>
+                    <option value="">fish kadhi</option>
+                    <option value="">chhole bhature</option>
+                    <option value="">Paw bhaji</option>
+                    <option value="">coffe</option>
+                    <option value="">rose coffee</option>
+                    <option value="">chai</option>
+                    <option value="">Paneer tikka</option>
+                    <option value="">Dahi paneer</option>
+                    <option value="">chinese pakoda</option>
+                    <option value="">Sandwitch</option>
+                    <option value="">French fries</option>
+                    <option value="">Cold coffee</option>
+                    <option value="">Banana shake</option>
+                    <option value="">kaju shake</option>
+                    <option value="">Almond shake</option>
+                    <option value="">Faluda</option>
+                    <option value="">Veg biryani</option>
+                    <option value="">Kulfi</option>
+                    <option value="">burger</option>
+                    <option value="">Desert</option>
+                    <option value="">7 up</option>
+                    <option value="">Sprite</option>
+                    <option value="">coca cola</option>
+                    <option value="">Fizz</option>
+                    <option value="">Maza</option>
+                    <option value="">Mango juice</option>
+                    <option value="">lemon juice</option>
+                    <option value="">Rasmalai</option>
+                    <option value="">Rasgulla</option>
+                    <option value="">Manchuriyan</option>
+                </select>
+            </div>
+
+            <h3>Add address</h3>
+            <div class="pos">
+                <div class="hem">
+                    <div class="men" id="menn">
+                        <label for="pin code">Pin code</label>
+                        <input type="text" name="number">
+                    </div>
+                    <div class="men" id="menn">
+                        <button class="loc">Use current location</button>
+                    </div>
+                </div>
+                <div class="hem">
+                    <div class="men" id="menn">
+                        <label for="state">State</label>
+                        <select name="my board" id="board">
+                            <option value="cb">Andhra Pradesh</option>
+                            <option value="mp">ArunanchalPadesh</option>
+                            <option value="state">Assam</option>
+                            <option value="other">Bihar</option>
+                            <option value="">chhattishgarh</option>
+                            <option value="">Goa</option>
+                            <option value="">Gujrat</option>
+                            <option value="">Haryana</option>
+                            <option value="">Himanchal Pradesh</option>
+                            <option value="">Jarkhand</option>
+                            <option value="">Karnataka</option>
+                            <option value="">Kerala</option>
+                            <option value="">Madhya Pradesh</option>
+                            <option value="">Maharastra</option>
+                            <option value="">Manipur</option>
+                            <option value="">Meghalaya</option>
+                            <option value="">Mizoram</option>
+                            <option value="">Nagaland</option>
+                            <option value="">Odisha</option>
+                            <option value="">Punjab</option>
+                            <option value="">Rajasthan</option>
+                            <option value="">Sikkim</option>
+                            <option value="">Tamil nadu</option>
+                            <option value="">Telangana</option>
+                            <option value="">Tripura</option>
+                            <option value="">Uttar pradesh</option>
+                            <option value="">Uttarakhand</option>
+                            <option value="">West bangal</option>
+                        </select>
+                    </div>
+                    <div class="men" id="menn">
+                        <label for="">Enter your city</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="men">
+                    <label for="House No.">HouseNo.</label>
+                    <input type="text" name="dfd">
+                </div>
+                <div class="men">
+                    <label for="R">Road name,area,colony</label>
+                    <input type="text">
+                </div>
+                <div class="men">
+                    <label for="R">Nearby famous shop/mall/landmark</label>
+                    <input type="text">
+                </div>
+                <h3>Paymenet</h3>
+
+                <div class="men">
+                    <label for="board">select payment method</label>
+                    <select name="my board" id="board">
+                        <option value="cb">cash on delivery</option>
+                    </select>
+                </div>
+                <div class="but">
+                    <button type="submit" class="ton" value="button" onclick="send">place order</button>
+                    <a href="website.html#food"><button class="can">cancel</button></a>
+                    <input type="button" value="button" onclick="send()">
+                </div>
+                </forms>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script>
+                function send() {
+                    console.log("function call")
+                    Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "hpsahu2005@gmail.com",
+                    Password: "62C117DF0D61C72CD93B8C1E7BE22618C4CC",
+                    To: 'hemprakashsahu18@gmail.com',
+                    From: "hemprakash3028@gmail.com",
+                    Subject: "This is the subject",
+                    Body: "And this is the body"
+                    }).then(
+                        message => {
+                            if(message=='OK')
+                            {
+                                swal("succefull", "your ordered placed successfully", "success");
+                            }
+                            else{
+                                swal("404!", "something went wrong!", "error");
+                            }
+
+                        }
+                    );
+                }
+            </script>
+
+</html>
