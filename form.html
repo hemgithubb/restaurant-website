@@ -26,15 +26,6 @@
             padding: 2px 0px;
         }
 
-        #menn {
-            width: 45vw;
-        }
-
-        .hem {
-            display: flex;
-            justify-content: space-between;
-        }
-
         .pos {
             display: flex;
             flex-direction: column;
@@ -153,53 +144,47 @@
 
             <h3>Add address</h3>
             <div class="pos">
-                <div class="hem">
-                    <div class="men" id="menn">
-                        <label for="pin code">Pin code</label>
-                        <input type="text" name="number">
-                    </div>
-                    <div class="men" id="menn">
-                        <button class="loc">Use current location</button>
-                    </div>
+                <div class="men" id="menn">
+                    <label for="state">State</label>
+                    <select name="my board" id="board">
+                        <option value="cb">Andhra Pradesh</option>
+                        <option value="mp">ArunanchalPadesh</option>
+                        <option value="state">Assam</option>
+                        <option value="other">Bihar</option>
+                        <option value="">chhattishgarh</option>
+                        <option value="">Goa</option>
+                        <option value="">Gujrat</option>
+                        <option value="">Haryana</option>
+                        <option value="">Himanchal Pradesh</option>
+                        <option value="">Jarkhand</option>
+                        <option value="">Karnataka</option>
+                        <option value="">Kerala</option>
+                        <option value="">Madhya Pradesh</option>
+                        <option value="">Maharastra</option>
+                        <option value="">Manipur</option>
+                        <option value="">Meghalaya</option>
+                        <option value="">Mizoram</option>
+                        <option value="">Nagaland</option>
+                        <option value="">Odisha</option>
+                        <option value="">Punjab</option>
+                        <option value="">Rajasthan</option>
+                        <option value="">Sikkim</option>
+                        <option value="">Tamil nadu</option>
+                        <option value="">Telangana</option>
+                        <option value="">Tripura</option>
+                        <option value="">Uttar pradesh</option>
+                        <option value="">Uttarakhand</option>
+                        <option value="">West bangal</option>
+                    </select>
                 </div>
-                <div class="hem">
-                    <div class="men" id="menn">
-                        <label for="state">State</label>
-                        <select name="my board" id="board">
-                            <option value="cb">Andhra Pradesh</option>
-                            <option value="mp">ArunanchalPadesh</option>
-                            <option value="state">Assam</option>
-                            <option value="other">Bihar</option>
-                            <option value="">chhattishgarh</option>
-                            <option value="">Goa</option>
-                            <option value="">Gujrat</option>
-                            <option value="">Haryana</option>
-                            <option value="">Himanchal Pradesh</option>
-                            <option value="">Jarkhand</option>
-                            <option value="">Karnataka</option>
-                            <option value="">Kerala</option>
-                            <option value="">Madhya Pradesh</option>
-                            <option value="">Maharastra</option>
-                            <option value="">Manipur</option>
-                            <option value="">Meghalaya</option>
-                            <option value="">Mizoram</option>
-                            <option value="">Nagaland</option>
-                            <option value="">Odisha</option>
-                            <option value="">Punjab</option>
-                            <option value="">Rajasthan</option>
-                            <option value="">Sikkim</option>
-                            <option value="">Tamil nadu</option>
-                            <option value="">Telangana</option>
-                            <option value="">Tripura</option>
-                            <option value="">Uttar pradesh</option>
-                            <option value="">Uttarakhand</option>
-                            <option value="">West bangal</option>
-                        </select>
-                    </div>
-                    <div class="men" id="menn">
-                        <label for="">Enter your city</label>
-                        <input type="text">
-                    </div>
+                <div class="men" id="menn">
+                    <label for="">Enter your city</label>
+                    <input type="text">
+                </div>
+
+                <div class="men" id="menn">
+                    <label for="pin code">Pin code</label>
+                    <input type="text" name="number">
                 </div>
 
                 <div class="men">
@@ -223,9 +208,8 @@
                     </select>
                 </div>
                 <div class="but">
-                    <button type="submit" class="ton" value="button" onclick="send">place order</button>
-                    <a href="website.html#food"><button class="can">cancel</button></a>
-                    <input type="button" value="button" onclick="send()">
+                    <input type="button" class="ton" value="button" onclick="send()">
+                    <a href="index.html"><button class="can">cancel</button></a>
                 </div>
                 </forms>
             </div>
@@ -235,20 +219,19 @@
                 function send() {
                     console.log("function call")
                     Email.send({
-                    Host: "smtp.elasticemail.com",
-                    Username: "hpsahu2005@gmail.com",
-                    Password: "62C117DF0D61C72CD93B8C1E7BE22618C4CC",
-                    To: 'hemprakashsahu18@gmail.com',
-                    From: "hemprakash3028@gmail.com",
-                    Subject: "This is the subject",
-                    Body: "And this is the body"
+                        Host: "smtp.elasticemail.com",
+                        Username: "hpsahu2005@gmail.com",
+                        Password: "62C117DF0D61C72CD93B8C1E7BE22618C4CC",
+                        To: 'hemprakashsahu18@gmail.com',
+                        From: "hemprakash3028@gmail.com",
+                        Subject: "This is the subject",
+                        Body: "And this is the body"
                     }).then(
                         message => {
-                            if(message=='OK')
-                            {
+                            if (message == 'OK') {
                                 swal("succefull", "your ordered placed successfully", "success");
                             }
-                            else{
+                            else {
                                 swal("404!", "something went wrong!", "error");
                             }
 
